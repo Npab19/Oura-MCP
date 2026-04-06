@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://cloud.ouraring.com/v2/docs)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://cloud.ouraring.com/v2/docs/openapi.json)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://cloud.ouraring.com/v2/openapi.json)",
+      "WebFetch(domain:cloud.ouraring.com)",
+      "Bash(curl -s -L -H 'Accept: application/json' https://cloud.ouraring.com/v2/docs)",
+      "Bash(curl -s \"https://cloud.ouraring.com/v2/static/json/openapi-1.28.json\")",
+      "Read(//tmp/**)",
+      "Bash(curl -sv https://oura-mcp.8818.io/.well-known/oauth-protected-resource/mcp)",
+      "WebFetch(domain:ouraring.com)",
+      "WebFetch(domain:www.ouraring.com)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:support.ouraring.com)",
+      "WebFetch(domain:jsr.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:pypi.org)",
+      "WebFetch(domain:community.home-assistant.io)",
+      "WebFetch(domain:wearipedia.readthedocs.io)",
+      "WebFetch(domain:partnersupport.ouraring.com)",
+      "WebFetch(domain:developer.ouraring.com)",
+      "WebFetch(domain:api.ouraring.com)",
+      "WebFetch(domain:zackproser.com)"
+    ]
+  }
+}

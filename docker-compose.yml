@@ -1,0 +1,20 @@
+services:
+  oura-mcp:
+    build: .
+    environment:
+      - OURA_CLIENT_ID=${OURA_CLIENT_ID}
+      - OURA_CLIENT_SECRET=${OURA_CLIENT_SECRET}
+      - PORT=${PORT:-3000}
+      - SERVER_URL=${SERVER_URL}
+    restart: unless-stopped
+
+  tunnel:
+    image: cloudflare/cloudflared:2026.3.0
+    command: tunnel run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - oura-mcp
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1'

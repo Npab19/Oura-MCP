@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.git/
+.gitignore
+.claude/
+*.md
+LICENSE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
